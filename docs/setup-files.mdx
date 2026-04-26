@@ -1,0 +1,69 @@
+---
+sidebar_position: 2
+---
+
+# Setting up your files
+
+Just like with InDesign, file management is important for code. However, you have to manage
+files yourself, as there is not automatic packaging that's done for you.
+
+VSCode works with folders of code files. It will treat your folder as your workspace, so we first
+need to make a folder for the homework assignment.
+
+## Create a working folder
+
+To set up your files for GD182 homeworks, first create an empty folder on your computer (CMD+SHIFT+N in Finder on Mac).
+Put it wherever you like to keep your other homework files.
+
+![New folder in Mac Finder](/img/finder_new_folder.png)
+
+Next, open VSCode and click File -> Open Folder, and select your new empty folder. If asked if you trust the authors,
+click yes, trust the authors (after all, _you_ are the author). Your editor should look something like this, with your
+folder name in the top left:
+
+![Empty folder in VSCode](/img/vscode_empty_folder.png)
+
+## Create an HTML file
+
+Now we can start adding code! Put your mouse on the folder name in the "EXPLORER" pane on the left.
+Click the new file button in the explorer on the left to create a blank file, and name it `index.html`.
+
+Copy the HTML code from codepen into this file:
+![HTML Code from CodePen.io](/img/codepen-copy-html.png)
+
+Your result should look something like this:
+![VSCode index.html](/img/vscode-after-pasting-html.png)
+
+## Create a CSS file
+
+Similarly, create a new file, and call this one `styles.css`. Copy the code from the "CSS" section in Codepen.io:
+![CSS Code from CodePen.io](/img/codepen-copy-css.png)
+
+Paste it into `styles.css`. You should have something like the following:
+![VSCode styles.css](/img/vscode-after-pasting-css.png)
+
+## Link HTML to your CSS
+
+Lastly, we need an extra piece of code to link `styles.css` to our `index.html`. Codepen does this for you in its editor,
+but when working locally, you will need to add a bit of code to the `head`.
+
+Add this at the very start of your `index.html`:
+
+```
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+```
+
+Your `index.html` should look something like this:
+![index.html after adding stylesheet link](/img/vscode-link-css-to-html.png)
+
+## Test out your HTML!
+
+In Finder, right click your `index.html`, and select `Open With`, and select Google Chrome (or your preferred browser).
+You should see your HTML rendered with the styles.
+
+![Opening index.html in Chrome](/img/chrome-local-html-file.png)
+
+Notice that the URL starts with `file://` instead of `http://`.
+A website is just HTML and any linked CSS files, sent over to you from another computer, typically called a server.
